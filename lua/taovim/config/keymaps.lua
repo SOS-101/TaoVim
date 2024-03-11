@@ -2,6 +2,8 @@ local map = require("taovim.util").safe_keymap_set
 
 map({ "i" }, "<C-c>", "<esc>", { silent = true })
 
+map({ "n" }, "q:", ":TSContextDisable<cr>q:", { silent = true })
+
 -- better up/down
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map({ "n", "x" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
